@@ -1,5 +1,6 @@
 $(() => {
   $("#formSubmit").on("click", () => {
+    console.log("button");
     let newBook = {
       "title": $("#book_title").val(),
       "genre": $("#book_genre").val(),

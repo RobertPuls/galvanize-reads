@@ -10,3 +10,11 @@ ul {
 .top-margin {
   margin-top: 3%;
 }
+
+#formSubmit {
+  margin: 3% 0 !important;
+}
+
+.headerBtn{
+  margin: 4% 0 0 2%!important;
+}
