@@ -7,5 +7,3 @@ let BASE_URL;
     BASE_URL = `https://galvanize-read-server.herokuapp.com`;
   }
 })();
-
-module.exports = BASE_URL;

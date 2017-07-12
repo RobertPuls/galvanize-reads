@@ -1,5 +1,3 @@
-const BASE_URL = require("./shared");
-
 $(() => {
   $.get(`${BASE_URL}/book/all`, data => handlebars(data, "#bookList", "#book"));
 

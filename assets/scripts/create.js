@@ -1,5 +1,3 @@
-const BASE_URL = require("./shared");
-
 $(() => {
   $("#formSubmit").on("click", () => {
     let newBook = {
