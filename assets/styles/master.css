@@ -1,0 +1,12 @@
+ul {
+  list-style-type: none;
+}
+
+.hero {
+  border: black solid 1px;
+  padding: 5% 0 1%;
+}
+
+.top-margin {
+  margin-top: 3%;
+}
