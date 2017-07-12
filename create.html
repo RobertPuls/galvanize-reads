@@ -16,31 +16,35 @@
       </div>
     </header>
 
-    <div id="main">
-      <article id="bookList" class="ink-grid">
-
-      </article>
-    </div>
-
-    <script id="book" type="text/x-handlebars-template">
-      <section id="bookItem" class="column-group top-margin">
-        <img id="bookCover" class="all-20" src="{{book_cover}}" alt="">
-        <div id="bookInfo" class="all-80">
-          <ul class="ink-grid">
-            <li class="column-group"><h5 class="all-80">{{book_title}}</h5><span class="all-20"><button class="ink-button">Edit</button><button class="ink-button">Remove</button></span></li>
-            <li>By {{#each authors}} {{first_name}} {{last_name}} {{/each}}</li>
-            <li>{{book_genre}}</li>
-            <li><p>{{book_desc}}</p></li>
-          </ul>
+    <div class="ink-grid">
+      <form class="column-group ink-form">
+        <div class="control-group required all-75 push-center">
+          <div class="control top-margin">
+              <input name="book_title" type="text" placeholder="Enter Book Title">
+          </div>
+          <p class="tip">This field is required</p>
+          <div class="control top-margin">
+              <input name="book_genre" type="text" placeholder="Enter Book Genre">
+          </div>
+          <p class="tip">This field is required</p>
+          <div class="control top-margin">
+              <input name="book_desc" type="text" placeholder="Enter Book Description">
+          </div>
+          <div class="control top-margin">
+              <input name="book_cover" type="text" placeholder="Enter Book Cover URL">
+          </div>
         </div>
-      </section>
-    </script>
+        <button class="ink-button">Submit</button>
+      </form>
+    </div>
 
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/js/ink-all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-    <script src="/assets/scripts/app.js"></script>
+    <script src="./assets/scripts/create.js">
+
+    </script>
 
   </body>
 </html>

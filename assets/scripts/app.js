@@ -1,14 +1,6 @@
+const BASE_URL = require("./shared");
+
 $(() => {
-  let BASE_URL;
-
-  (function getBaseURL() {
-    if (window.location.hostname == "localhost") {
-      BASE_URL = `http://localhost:3000`;
-    } else {
-      BASE_URL = `https://galvanize-read-server.herokuapp.com`;
-    }
-  })();
-
   $.get(`${BASE_URL}/all`, data => handlebars(data, "#bookList", "#book"));
 
 
