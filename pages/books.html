@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.1.10/css/ink.css">
+    <link rel="stylesheet" href="../assets/styles/master.css">
+
+    <meta charset="utf-8">
+    <title>Galvanize Reads</title>
+  </head>
+  <body>
+    <header class="ink-grid">
+      <div class="column-group horizontal-gutters">
+        <img class="all-10 vertical-space" src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/8552631/leather_book_preview.png">
+        <h2 class="all-90 vertical-space">Galvanize Reads</h2>
+      </div>
+    </header>
+
+    <div id="main">
+      <article id="bookList" class="ink-grid">
+
+      </article>
+    </div>
+
+    <script id="book" type="text/x-handlebars-template">
+      <section id="bookItem" class="column-group top-margin">
+        <img id="bookCover" class="all-20" src="{{book_cover}}" alt="">
+        <div id="bookInfo" class="all-80">
+          <ul class="ink-grid">
+            <li class="column-group"><h5 class="all-80">{{book_title}}</h5><span class="all-20"><button class="ink-button">Button</button><button class="ink-button">Button</button></span></li>
+            <li>By {{#each authors}} {{first_name}} {{last_name}} {{/each}}</li>
+            <li>{{book_genre}}</li>
+            <li><p>{{book_desc}}</p></li>
+          </ul>
+        </div>
+      </section>
+    </script>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.10/js/ink-all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="../assets/scripts/app.js"></script>
+
+  </body>
+</html>
