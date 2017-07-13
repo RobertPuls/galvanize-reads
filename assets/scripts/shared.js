@@ -1,4 +1,6 @@
 let BASE_URL;
+const currentURL = window.location.href;
+
 
 (function getBaseURL() {
   if (window.location.hostname == "localhost") {

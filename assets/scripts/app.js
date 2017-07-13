@@ -1,7 +1,13 @@
 $(() => {
-  $.get(`${BASE_URL}/book/all`, data => handlebars(data, "#bookList", "#book"))
+  let route = "all";
+
+  if(currentURL.includes("?")) {
+    route = `${currentURL.substring(currentURL.indexOf("=")+1)}`;
+  }
+
+  $.get(`${BASE_URL}/book/${route}`, data => handlebars(data, "#bookList", "#book"))
   .then(() => {
-    $(".removeBtn").on("click",function() {
+    $(".removeBtn").on("click", function() {
       $.ajax({
         method: "DELETE",
         url: `${BASE_URL}/book/${this.value}`,

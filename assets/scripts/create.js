@@ -1,6 +1,15 @@
 $(() => {
+  let method = "POST";
+  let route = "create";
+
+  if(currentURL.includes("?")) {
+    route = `${currentURL.substring(currentURL.indexOf("=")+1)}`;
+    method = "PUT"
+  }
+
+  console.log(method);
+
   $("#formSubmit").on("click", () => {
-    console.log("button");
     let newBook = {
       "title": $("#book_title").val(),
       "genre": $("#book_genre").val(),
@@ -8,6 +17,10 @@ $(() => {
       "cover_url": $("#book_cover").val()
     };
 
-    $.post(`${BASE_URL}/book/create`, newBook).done(console.log("done"));
+    $.ajax({
+      url: `${BASE_URL}/book/${route}`,
+      method: method,
+      data: newBook
+    }).done(console.log("done"));
   });
 });
