@@ -11,7 +11,10 @@ $(() => {
       $.ajax({
         method: "DELETE",
         url: `${BASE_URL}/book/${this.value}`,
-      }).done(() => alert("Deleted"));
+      }).done(() => {
+        alert("Deleted");
+        window.location.href = "https://galvanize-reads-db00e.firebaseapp.com/books.html";
+      });
     });
   });
 });

@@ -28,7 +28,7 @@
         <img id="bookCover" class="all-20" src="{{book_cover}}" alt="">
         <div id="bookInfo" class="all-80">
           <ul class="ink-grid">
-            <li class="column-group"><h5 class="all-80">{{book_title}}</h5><span class="all-20"><a href="./create.html?id={{book_id}}"><button class="ink-button" value="{{book_id}}">Edit</button></a><a href="books.html"><button class="ink-button removeBtn" value="{{book_id}}">Remove</button></a></span></li>
+            <li class="column-group"><h5 class="all-80">{{book_title}}</h5><span class="all-20"><a href="./create.html?id={{book_id}}"><button class="ink-button" value="{{book_id}}">Edit</button></a><a><button class="ink-button removeBtn" value="{{book_id}}">Remove</button></a></span></li>
             <li>By {{#each authors}} {{first_name}} {{last_name}} {{/each}}</li>
             <li>{{book_genre}}</li>
             <li><p>{{book_desc}}</p></li>
